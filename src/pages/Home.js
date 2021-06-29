@@ -9,17 +9,14 @@ const Home = () => {
 
     const [ gifs, updateGifs ] = useState([])
 
-    const handleClick = () => {
-       
+    const handleClick = () => {   
         getRandomGif()
             .then(updateGifs)
-
     }
 
     useEffect( () => {
         getRandomGif().then( updateGifs )
     }, [] );
-    
 
     return (
         <>
@@ -31,9 +28,9 @@ const Home = () => {
                      { 
                              gifs?.map( ( item ) => (
                                     <CardGif                        
-                                        key={ item.id }
-                                        title={ item.title }
-                                        image_url={ item.url }
+                                        key={ item?.id }
+                                        title={ item?.title }
+                                        image_url={ item?.image_url }
                                     />))   
                     }
                 </div>

@@ -12,10 +12,10 @@ const getGif = async () => {
 }
 
 export const getRandomGif = async () => {
-    const gifs1 = [ ...Array(10) ].map( () => {          
+    const gifs = [ ...Array(10) ].map( () => {          
             return getGif();
     } );
-    const data = await Promise.all( gifs1 ) ;
+    const data = await Promise.all( gifs ) ;
 
     return data;
  
