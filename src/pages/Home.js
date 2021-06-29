@@ -30,7 +30,7 @@ const Home = () => {
                                     <CardGif                        
                                         key={ item?.id }
                                         title={ item?.title }
-                                        image_url={ item?.image_url }
+                                        image_url={ item?.fixed_height_small_still_url }
                                     />))   
                     }
                 </div>
